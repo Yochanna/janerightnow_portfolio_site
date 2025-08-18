@@ -1,92 +1,43 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>JavaScript • Preview</title>
+  <title>JavaScript • Projects</title>
   <link rel="stylesheet" href="/styles.css" />
   <style>
-    .container{max-width:960px;margin:0 auto;padding:24px}
-    .panel{background:#181824;border:1px solid #26273a;border-radius:14px;padding:16px;margin-bottom:16px}
-    .demo-frame{width:100%;height:60vh;border:1px solid #26273a;border-radius:12px;background:#0a0a14}
-    .files{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
-    .code{background:#0a0a14;border:1px solid #26273a;border-radius:12px;padding:12px;overflow:auto;white-space:pre; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 13px;}
-    .file-block{margin:12px 0}
-    .file-head{display:flex;align-items:center;justify-content:space-between;margin:6px 0 4px}
-    .copy{font-size:12px;border:1px solid #26273a;background:#121228;color:#e8e8f0;border-radius:8px;padding:4px 8px;cursor:pointer}
+    .wrap{max-width:960px;margin:24px auto;padding:0 16px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .card{background:#fff;border:2px solid #7C6B55;border-radius:8px;padding:16px;box-shadow:2px 2px 6px rgba(0,0,0,.06)}
+    .card h3{margin:0 0 6px}
+    .open{display:inline-block;margin-top:8px;padding:8px 12px;background:#A3B18A;color:#fff;border-radius:6px;text-decoration:none}
+    iframe{width:100%;height:60vh;border:1px solid #ccc;border-radius:8px;background:#fff;margin-top:10px}
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>JavaScript</h1>
-
-    <section class="panel">
-      <h2>Live Demo</h2>
-      <p>This is your running code. It loads <code>projects/javascript/demo/index.html</code>.</p>
-      <p><a href="demo/index.html" target="_blank" rel="noopener">Open demo in new tab ↗</a></p>
-      <iframe class="demo-frame" src="demo/index.html" title="JavaScript Demo"></iframe>
-    </section>
-
-    <section class="panel">
-      <h2>Source Code</h2>
-      <div id="files" class="files"></div>
-      <div id="codeArea"></div>
-    </section>
+  <div class="wrap">
+    <h1>JavaScript Demos</h1>
+    <div class="grid">
+      <div class="card">
+        <h3>Guessing Game</h3>
+        <p>A simple number guessing game.</p>
+        <a class="open" href="demo/guessing_game/index.html" target="_blank" rel="noopener">Open demo</a>
+       
+      </div>
+      <div class="card">
+        <h3>Shopping Cart</h3>
+        <p>Add/remove items and compute totals.</p>
+        <a class="open" href="demo/shopping_cart/index.html" target="_blank" rel="noopener">Open demo</a>
+       
+      </div>
+    </div>
   </div>
-
-  <script>
-    
-    const FILES = [
-      {label: "demo/index.html", path: "demo/index.html"},
-      {label: "demo/app.js", path: "demo/app.js"},
-      {label: "demo/styles.css", path: "demo/styles.css"}
-    ];
-
-    const filesBar = document.getElementById('files');
-    const codeArea = document.getElementById('codeArea');
-
-    function renderFile(label, text) {
-      const wrap = document.createElement('div');
-      wrap.className = "file-block";
-      wrap.innerHTML = `
-        <div class="file-head">
-          <strong>${label}</strong>
-          <button class="copy">Copy</button>
-        </div>
-        <pre class="code"><code>${text
-          .replace(/&/g,"&amp;")
-          .replace(/</g,"&lt;")
-          .replace(/>/g,"&gt;")}</code></pre>
-      `;
-      wrap.querySelector(".copy").addEventListener("click", async () => {
-        await navigator.clipboard.writeText(text);
-        wrap.querySelector(".copy").textContent = "Copied!";
-        setTimeout(() => wrap.querySelector(".copy").textContent = "Copy", 1200);
-      });
-      codeArea.appendChild(wrap);
-    }
-
-    async function loadFiles() {
-      for (const f of FILES) {
-        const btn = document.createElement('button');
-        btn.textContent = f.label;
-        btn.className = "copy"; // reuse style for little pills
-        btn.addEventListener("click", () => {
-          const el = [...codeArea.children].find(div => div.querySelector("strong")?.textContent === f.label);
-          el?.scrollIntoView({behavior:"smooth", block:"start"});
-        });
-        filesBar.appendChild(btn);
-
-        try {
-          const res = await fetch(f.path);
-          const text = await res.text();
-          renderFile(f.label, text);
-        } catch (e) {
-          renderFile(f.label, "// Could not load " + f.path + "\\n" + String(e));
-        }
-      }
-    }
-    loadFiles();
-  </script>
 </body>
 </html>
+
+
+
+
+
+
+

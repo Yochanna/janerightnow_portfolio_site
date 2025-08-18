@@ -1,0 +1,31 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+button {
+  padding: 6px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#total {
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+
+
+
+  

@@ -3,14 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Project Preview</title>
+  <title>NextJS • Projects</title>
   <link rel="stylesheet" href="/styles.css" />
-  <style>.container{max-width:960px;margin:0 auto;padding:24px}.panel{background:#181824;border:1px solid #26273a;border-radius:14px;padding:16px}</style>
+  <style>
+    .wrap{max-width:960px;margin:24px auto;padding:0 16px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .card{background:#fff;border:2px solid #7C6B55;border-radius:8px;padding:16px;box-shadow:2px 2px 6px rgba(0,0,0,.06)}
+    .card h3{margin:0 0 6px}
+    .open{display:inline-block;margin-top:8px;padding:8px 12px;background:#A3B18A;color:#fff;border-radius:6px;text-decoration:none}
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>My Project</h1>
-    <p class="panel">Replace this with screenshots, notes, or an embedded demo.</p>
+  <div class="wrap">
+    <h1>NextJS Demos</h1>
+    <div class="grid">
+      <div class="card">
+        <h3>Demo 1</h3>
+        <p>Static SPA page that mimics routing.</p>
+        <a class="open" href="demo/index.html" target="_blank" rel="noopener">Open demo</a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
+
