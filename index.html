@@ -1,88 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>My Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <h1>My Portfolio</h1>
-    <p class="subtitle">This is where my projects live. Click a card to open.</p>
+    <p class="subtitle">Click any card to open its preview. No GitHub links—just web views.</p>
   </header>
 
   <main class="content">
-    
+   
     <section id="projects" class="projects" aria-live="polite">
+      
 
-      <article class="project-card" id="proj-javascript">
+      <article class="project-card" id="proj-javascript" data-url="projects/javascript/">
         <h2>JavaScript</h2>
         <p>Collection of JavaScript exercises and demos.</p>
-        
-        <a class="open" href="https://github.com/Yochanna/programming_introduction" target="_blank" rel="noopener">
-          Open JavaScript 
-        </a>
+        <div class="actions"><button class="open">Open preview</button></div>
       </article>
 
-      <article class="project-card" id="proj-python">
+      <article class="project-card" id="proj-python" data-url="projects/python_work/">
         <h2>Python Work</h2>
         <p>Python scripts, exercises and mini projects.</p>
-        
-        <a class="open" href="https://github.com/Yochanna/python_work" target="_blank" rel="noopener">
-          Open Python Work 
-        </a>
+        <div class="actions"><button class="open">Open preview</button></div>
       </article>
 
-      <article class="project-card" id="proj-htmx">
+      <article class="project-card" id="proj-htmx" data-url="projects/htmx/">
         <h2>HTMX</h2>
-        <p>HTMX experiments:..............</p>
-        <a class="open" href="projects/htmx/index.html" target="_blank" rel="noopener">Open HTMX Demos</a>
+        <p>HTMX experiments and snippets.</p>
+        <div class="actions"><button class="open">Open preview</button></div>
       </article>
 
-      <article class="project-card" id="proj-node">
+      <article class="project-card" id="proj-node" data-url="projects/nodejs/">
         <h2>NodeJS</h2>
-        <p>Node.js server examples ................</p>
-        <a class="open" href="projects/nodejs/index.html" target="_blank" rel="noopener">Open NodeJS Examples</a>
+        <p>Small Node servers and examples (static previews only).</p>
+        <div class="actions"><button class="open">Open preview</button></div>
       </article>
 
-      <article class="project-card" id="proj-react">
+      <article class="project-card" id="proj-react" data-url="projects/react/">
         <h2>React</h2>
-        <p>React component demos ...................</p>
-        <a class="open" href="projects/react/index.html" target="_blank" rel="noopener">Open React Projects</a>
+        <p>Component demos and mini apps.</p>
+        <div class="actions"><button class="open">Open preview</button></div>
       </article>
 
-      <article class="project-card" id="proj-mern">
+      <article class="project-card" id="proj-mern" data-url="projects/mern/">
         <h2>MERN</h2>
-        <p>MERN stack projects ..........</p>
-        <a class="open" href="projects/mern/index.html" target="_blank" rel="noopener">Open MERN Projects</a>
+        <p>Mongo + Express + React + Node (static previews only).</p>
+        <div class="actions"><button class="open">Open preview</button></div>
       </article>
 
-      <article class="project-card" id="proj-next">
+      <article class="project-card" id="proj-next" data-url="projects/nextjs/">
         <h2>NextJS</h2>
-        <p>Next.js pages and examples ...............</p>
-        <a class="open" href="projects/nextjs/index.html" target="_blank" rel="noopener">Open NextJS Projects</a>
+        <p>Pages and examples with Next (static previews only).</p>
+        <div class="actions"><button class="open">Open preview</button></div>
       </article>
-
     </section>
 
     
     <section class="add-area" aria-label="Add a project">
       <h3>Add a Project</h3>
       <label>Title:
-        <input id="projTitle" type="text" placeholder="My Project">
+        <input id="projTitle" type="text" placeholder="My Project" />
       </label>
-      <label>URL:
-        <input id="projURL" type="text" placeholder="projects/myproject/index.html">
+      <label>Preview URL (relative or full):
+        <input id="projURL" type="text" placeholder="projects/myproject/" />
       </label>
       <label>Description:
-        <input id="projDesc" type="text" placeholder="Short sentence">
+        <input id="projDesc" type="text" placeholder="Short sentence" />
       </label>
       <button id="addProj">Add Project</button>
+      <p class="hint">
+        If you leave the URL empty, we’ll use
+        <code>projects/&lt;slug-from-title&gt;/</code>. Be sure that folder has an <code>index.html</code>.
+      </p>
     </section>
 
     <section class="help">
-      <p>Starter projects are listed above. You can add more with the form.</p>
+      <p>Everything opens as a web preview on this site. Add more projects any time.</p>
     </section>
   </main>
 
@@ -90,9 +88,24 @@
     <p>Made simple. Ready for GitHub Pages.</p>
   </footer>
 
+  
+  <div id="overlay" class="overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="viewer">
+      <div class="viewer-head">
+        <strong id="viewerTitle">Preview</strong>
+        <div class="viewer-actions">
+          <a id="openNewTab" href="#" target="_blank" rel="noopener">Open in new tab ↗</a>
+          <button id="closeViewer" aria-label="Close preview">✕</button>
+        </div>
+      </div>
+      <iframe id="viewerFrame" title="Project preview"
+              sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+    </div>
+    <div class="backdrop" id="backdrop"></div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
-
 
 
