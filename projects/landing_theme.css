@@ -1,0 +1,73 @@
+/* Minimal landing-page theming
+   Keeps your existing layout/markup, only changes colors + link styling. */
+
+/* Pull shared variables (no layout classes used) */
+@import url("/styles.css");
+
+/* If /styles.css is missing, uncomment these fallback variables:
+:root{
+  --bg:#1e2433; --text:#f5f7fc; --muted:#c7cfe6;
+  --accent:#ff5ca8; --accent-2:#ff8ec7; --accent-3:#d22e8a; --blue:#79c6ff;
+} */
+
+html, body { height: 100%; }
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Keep your current flow, just better spacing */
+main, body > div, body > section, body > article{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* Typography — colors only */
+h1, h2, h3 { color: #fff; margin-block: 0.6em 0.35em; }
+p { color: var(--muted); margin-block: 0.4em 1em; }
+
+/* Make links look like buttons without changing layout */
+a{
+  color: var(--blue);
+  text-decoration: none;
+}
+a:hover{ color: #a4d8ff; }
+
+/* Any link inside the content becomes a “button” look,
+   but we keep it inline so your layout doesn’t change. */
+main a, body > div a, body > section a, body > article a{
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: #0e1220 !important;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 10px 18px -8px rgba(255,92,168,.45);
+  font-weight: 600;
+}
+main a:hover,
+body > div a:hover,
+body > section a:hover,
+body > article a:hover{
+  filter: saturate(1.05);
+}
+
+/* Optional subtle divider if you used <hr> */
+hr{
+  border: 0;
+  border-top: 1px solid rgba(255,255,255,.08);
+  margin: 24px 0;
+}
+
+/* Images (if any) */
+img{ max-width: 100%; height: auto; border-radius: 8px; }
+
+
+
+
+

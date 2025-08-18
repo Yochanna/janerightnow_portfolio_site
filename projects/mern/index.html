@@ -3,27 +3,51 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MERN • Projects</title>
-  <link rel="stylesheet" href="/styles.css" />
+  <title>MERN Projects</title>
+
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../../landing_theme.css" />
+
   <style>
-    .wrap{max-width:960px;margin:24px auto;padding:0 16px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-    .card{background:#fff;border:2px solid #7C6B55;border-radius:8px;padding:16px;box-shadow:2px 2px 6px rgba(0,0,0,.06)}
-    .card h3{margin:0 0 6px}
-    .open{display:inline-block;margin-top:8px;padding:8px 12px;background:#A3B18A;color:#fff;border-radius:6px;text-decoration:none}
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+      gap:24px;
+      margin-top:12px;
+    }
+    .card{
+      padding:16px;
+      border-radius:14px;
+      border:1px solid var(--ring, #2e3753);
+      background: linear-gradient(180deg, #262f45, #222a40);
+      box-shadow: 0 10px 22px -12px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03);
+    }
+    a.open{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      color:#0e1220;
+      background:linear-gradient(135deg, var(--accent-2,#ff8ec7), var(--accent,#ff5ca8));
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow:0 10px 18px -8px rgba(255,92,168,.45);
+      font-weight:600;
+    }
+    a.open:hover{ filter:saturate(1.06); }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>MERN Demos</h1>
-    <div class="grid">
-      <div class="card">
-        <h3>Demo 1</h3>
-        <p>Client side MERN style example.</p>
-        <a class="open" href="demo/index.html" target="_blank" rel="noopener">Open demo</a>
-      </div>
-    </div>
+  <h1>MERN</h1>
+  <p>MERN stack projects.</p>
+
+  <div class="cards">
+    <section class="card">
+      <h2>App 1</h2>
+      <p>Coming soon.</p>
+      <a class="open" href="demo/index.html" target="_blank" rel="noopener">Open demo</a>
+    </section>
   </div>
 </body>
 </html>
+
 
