@@ -1,0 +1,4 @@
+:root { --bg:#0f0f15; --text:#e8e8f0; --card:#181824; --border:#26273a; }
+html,body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family:system-ui,Arial,sans-serif; }
+.demo-wrap { max-width: 760px; margin: 24px auto; padding: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; }
+button { padding: 8px 12px; border-radius: 8px; border: 0; cursor: pointer; }
