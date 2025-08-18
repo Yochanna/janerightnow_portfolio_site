@@ -3,24 +3,57 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Python Work • Projects</title>
+  <title>Python Work • Demos</title>
   <link rel="stylesheet" href="/styles.css" />
+
+  
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
   <style>
     .wrap{max-width:960px;margin:24px auto;padding:0 16px}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
     .card{background:#fff;border:2px solid #7C6B55;border-radius:8px;padding:16px;box-shadow:2px 2px 6px rgba(0,0,0,.06)}
     .card h3{margin:0 0 6px}
     .open{display:inline-block;margin-top:8px;padding:8px 12px;background:#A3B18A;color:#fff;border-radius:6px;text-decoration:none}
+    .row{display:flex;gap:8px;align-items:center;margin:.5rem 0}
+    input, textarea, button{font-size:1rem;padding:.5rem;border:1px solid #ccc;border-radius:6px;width:100%}
+    button{background:#A3B18A;color:#fff;cursor:pointer;width:auto}
+    pre{background:#f6f6f6;border:1px solid #ddd;border-radius:8px;padding:.75rem;overflow:auto}
+    hr{border:none;border-top:1px solid #ddd;margin:24px 0}
   </style>
 </head>
 <body>
   <div class="wrap">
     <h1>Python Work</h1>
+    <p>Three python demo projects.</p>
+
+    
     <div class="grid">
       <div class="card">
-        <h3>Demo 1</h3>
-        <p>Add your first Python-related demo here.</p>
-        <a class="open" href="demo/index.html" target="_blank" rel="noopener">Open demo</a>
+        <h3>Alien Invasion</h3>
+        <p>Pygame project placeholder.</p>
+        <a class="open" href="demo/alien_invasion/index.html" target="_blank" rel="noopener">Open demo</a>
+      </div>
+      <div class="card">
+        <h3>Data Visualisation</h3>
+        <p>Charts placeholder.</p>
+        <a class="open" href="demo/data_visualisation/index.html" target="_blank" rel="noopener">Open demo</a>
+      </div>
+      <div class="card">
+        <h3>Django</h3>
+        <p>Server app placeholder.</p>
+        <a class="open" href="demo/django/index.html" target="_blank" rel="noopener">Open demo</a>
+      </div>
+    </div>
+
+    <hr>
+
+ 
+      </div>
+
+        
+        <py-script src="app.py"></py-script>
       </div>
     </div>
   </div>
