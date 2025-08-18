@@ -1,0 +1,38 @@
+
+:root{
+  --bg:#F4F1EA;    
+  --accent:#7C6B55;
+  --muted:#C1B296;
+  --green:#A3B18A;
+  --card:#FFFFFF;
+  --text:#2E2E2E;
+}
+*{box-sizing:border-box;font-family:Arial, sans-serif}
+body{margin:0;background:var(--bg);color:var(--text)}
+.site-header{background:var(--muted);padding:28px 20px;text-align:center}
+.site-header h1{margin:0;font-size:32px;color:var(--accent)}
+.subtitle{margin:6px 0 0;color:#4b4b4b}
+
+.content{max-width:1000px;margin:24px auto;padding:0 16px}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+
+
+.project-card{background:var(--card);border:2px solid var(--accent);border-radius:8px;padding:16px;box-shadow:2px 2px 6px rgba(0,0,0,0.06)}
+.project-card h2{margin:0 0 8px;font-size:18px;color:var(--accent)}
+.project-card p{margin:0 0 12px;color:#444}
+.project-card a.open{display:inline-block;padding:8px 12px;background:var(--green);color:white;border-radius:6px;text-decoration:none}
+
+
+.add-area{margin-top:28px;background:linear-gradient(180deg,var(--card),#fff);padding:16px;border-radius:8px;border:1px solid #ddd}
+.add-area label{display:block;margin:8px 0;font-size:14px}
+.add-area input{width:100%;padding:8px;margin-top:6px;border:1px solid #ccc;border-radius:6px}
+#addProj{margin-top:10px;padding:10px 14px;background:var(--accent);color:white;border:none;border-radius:6px;cursor:pointer}
+
+
+.help{margin-top:18px;color:#444;font-size:14px}
+.site-footer{text-align:center;padding:18px 10px;color:#555}
+
+
+
+
+  

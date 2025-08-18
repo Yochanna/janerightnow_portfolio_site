@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>My Portfolio</h1>
+    <p class="subtitle">This is where my projects live. Click a card to open.</p>
+  </header>
+
+  <main class="content">
+    
+    <section id="projects" class="projects" aria-live="polite">
+
+      <article class="project-card" id="proj-javascript">
+        <h2>JavaScript</h2>
+        <p>Collection of JavaScript exercises and demos.</p>
+        
+        <a class="open" href="https://github.com/Yochanna/programming_introduction" target="_blank" rel="noopener">
+          Open JavaScript 
+        </a>
+      </article>
+
+      <article class="project-card" id="proj-python">
+        <h2>Python Work</h2>
+        <p>Python scripts, exercises and mini projects.</p>
+        
+        <a class="open" href="https://github.com/Yochanna/python_work" target="_blank" rel="noopener">
+          Open Python Work 
+        </a>
+      </article>
+
+      <article class="project-card" id="proj-htmx">
+        <h2>HTMX</h2>
+        <p>HTMX experiments:..............</p>
+        <a class="open" href="projects/htmx/index.html" target="_blank" rel="noopener">Open HTMX Demos</a>
+      </article>
+
+      <article class="project-card" id="proj-node">
+        <h2>NodeJS</h2>
+        <p>Node.js server examples ................</p>
+        <a class="open" href="projects/nodejs/index.html" target="_blank" rel="noopener">Open NodeJS Examples</a>
+      </article>
+
+      <article class="project-card" id="proj-react">
+        <h2>React</h2>
+        <p>React component demos ...................</p>
+        <a class="open" href="projects/react/index.html" target="_blank" rel="noopener">Open React Projects</a>
+      </article>
+
+      <article class="project-card" id="proj-mern">
+        <h2>MERN</h2>
+        <p>MERN stack projects ..........</p>
+        <a class="open" href="projects/mern/index.html" target="_blank" rel="noopener">Open MERN Projects</a>
+      </article>
+
+      <article class="project-card" id="proj-next">
+        <h2>NextJS</h2>
+        <p>Next.js pages and examples ...............</p>
+        <a class="open" href="projects/nextjs/index.html" target="_blank" rel="noopener">Open NextJS Projects</a>
+      </article>
+
+    </section>
+
+    
+    <section class="add-area" aria-label="Add a project">
+      <h3>Add a Project</h3>
+      <label>Title:
+        <input id="projTitle" type="text" placeholder="My Project">
+      </label>
+      <label>URL:
+        <input id="projURL" type="text" placeholder="projects/myproject/index.html">
+      </label>
+      <label>Description:
+        <input id="projDesc" type="text" placeholder="Short sentence">
+      </label>
+      <button id="addProj">Add Project</button>
+    </section>
+
+    <section class="help">
+      <p>Starter projects are listed above. You can add more with the form.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made simple. Ready for GitHub Pages.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
