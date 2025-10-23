@@ -5,54 +5,6 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>/projects/‌index.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>/projects/python_work/index.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>/projects/python_work/demo/portfolio_cms_portable_full/projects/templates/projects/screenshot_form.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>/projects/python_work/demo/portfolio_cms_portable_full/projects/templates/projects/project_detail.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>/projects/python_work/demo/portfolio_cms_portable_full/projects/templates/projects/base.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>/projects/python_work/demo/portfolio_cms_portable_full/projects/templates/projects/project_confirm_delete.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>/projects/python_work/demo/portfolio_cms_portable_full/projects/templates/projects/project_list.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>/projects/python_work/demo/portfolio_cms_portable_full/projects/templates/projects/project_form.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>/projects/nextjs/index.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>/projects/mern/index.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>/projects/htmx/index.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>/projects/nodejs/index.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
     <loc>/projects/javascript/index.html</loc>
     <changefreq>monthly</changefreq>
   </url>
@@ -62,10 +14,6 @@
   </url>
   <url>
     <loc>/projects/javascript/demo/shopping_cart/index.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>/projects/react/index.html</loc>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>
